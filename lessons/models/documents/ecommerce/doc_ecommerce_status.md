@@ -8,3 +8,9 @@ The status of the order. Can be one of:
 - Returned
 
 {% enddocs %}
+
+{% docs shipped_at %}
+
+When the order was shipped
+
+{% enddocs %}
