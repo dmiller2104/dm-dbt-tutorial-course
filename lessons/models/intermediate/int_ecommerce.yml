@@ -68,7 +68,7 @@ models:
               expression: "= (product_retail_price - item_sale_price)"
               severity: warn ### you can change things from error to warn. Error will stop pipeline.
 
-  - name: int_ecommerce_first_order_created
+  - name: int_ecommerce__first_order_created
     description: "ephemeral model"
     columns:
       - *user_id
