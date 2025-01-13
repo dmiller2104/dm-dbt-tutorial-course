@@ -40,5 +40,5 @@ models:
     +hours_to_expiration: 168
 
   tests:
-    lessons:
+    generic:
       +severity: warn
