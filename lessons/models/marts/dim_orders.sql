@@ -11,7 +11,7 @@ order_item_measures AS (
 
         {%- set departments = ['Men', 'Women'] -%}
         {%- for department_name in departments %}
-        SUM(IF(product_department = '{{department_name}}', item_sale_price)) as total_sold_{{ department_name.lower() }}s_wear{{ "," if not loop.last }}
+        SUM(IF(product_department = '{{department_name}}', item_sale_price, 0)) as total_sold_{{ department_name.lower() }}s_wear{{ "," if not loop.last }}
         {%- endfor %}
     FROM {{ ref('int_ecommerce__order_items_products') }}
     group by 1
