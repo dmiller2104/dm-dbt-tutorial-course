@@ -33,7 +33,7 @@ SELECT
 	om.total_profit,
 	om.total_discount,
     {% for department in departments %}
-    total_sold_{{ department.lower() }}swear{{ "," if not loop.last}}
+    total_sold_{{ department.lower() }}s_wear,
     {%- endfor %}
 
     TIMESTAMP_DIFF(od.created_at, user_data.first_order_created_at, DAY) as days_since_first_order -- creates a TS difference
